@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cherry Cakes</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            background: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            z-index: 1000; /* Make sure it covers other elements */
+        }
+
+        .popup-content {
+            position: relative;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="section">
+            <div class="logo">
+                <a href="index.html">Cherry Cakes</a>
+            </div>
+            <ul>
+                <li class="selected">
+                    <a href="index.html">home</a>
+                </li>
+                <li>
+                    <a href="about.html">about</a>
+                </li>
+                <li>
+                    <a href="hairstyle.html">cakes</a>
+                </li>
+                <li>
+                    <a href="news.html">news</a>
+                </li>
+                <li>
+                    <a href="contact.html">contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="article">
+            <img src="images/2.png" alt="" width="50%" height="50%">
+            <h1>Delicious cakes and unique designs come from experts.</h1>
+        </div>
+    </div>
+    <div id="body">
+        <ul>
+            <li>
+                <a href="hairstyle.html"><img src="images/1.png" alt="" width="210" height="170"></a>
+                <b>Bestseller</b>
+                <p>
+                    This is a masterpiece not to be missed! With a delicious flavor, a perfect combination of sweetness and fat, this cake has conquered the hearts of many diners. The crispy outer shell covers a smooth, creamy filling that melts in the mouth, making anyone who tries it once fascinated.
+                </p>
+            </li>
+            <li>
+                <a href="hairstyle.html"><img src="images/6.png" alt="" width="210" height="170"></a>
+                <b>Unique cake style</b>
+                <p>When you bite into each piece of cake, you will feel the harmony between the crispy crust and the smooth, fragrant cheese filling. This will definitely be a cake that will impress anyone who enjoys it</p>
+            </li>
+            <li>
+                <a href="hairstyle.html"><img src="images/4.png" alt="" width="210" height="170"></a>
+                <b>Featured</b>
+                <p>We always choose the freshest and highest quality ingredients. From flour, butter, milk to fruits and chocolate, all are carefully selected to ensure the perfect flavor for each cake.</p>
+            </li>
+            <li>
+                <a href="hairstyle.html"><img src="images/5.png" alt="" width="210" height="170"></a>
+                <b>We "cakes" you</b>
+                <p>We offer a wide range of cakes from cakes, breads, cakes to specialty baked goods. Each type of cake has its own style and flavor, meeting every customer's preferences</p>
+            </li>
+        </ul>
+        <div>
+            <div class="featured">
+                <h2>featured</h2>
+                <img src="images/featured.jpg" alt="">
+                <h3>Welcome to Our Bakery!</h3>
+                <p>Our bakery offers a delightful range of baked goods, meticulously crafted to satisfy your sweet cravings. Here's what makes our bakery stand out:</p>
+                <p>Quality and Originality:
+                    All our recipes are inspired by the finest traditions, ensuring a blend of quality and originality. We carefully select and check each ingredient to guarantee the best taste and texture in every bite.</p>
+                <p>Community and Support:
+                    Join our community of baking enthusiasts! If you have any questions or encounter any issues with our recipes or baking tips, participate in discussions on our forum. Connect with others who share your passion for baking and find inspiration together.</p>
+                <p>Always Innovating:
+                    We love the challenge of creating unique and special treats. Whether you're looking for a classic favorite or something completely new, we're here to make your baking dreams come true.</p>
+                <p>Experience the joy of baking with us and find out why our bakery is a favorite destination for sweet lovers everywhere.</p>
+            </div>
+            <div class="section">
+                <div class="article">
+                    <h2>Cake type</h2>
+                    <p>
+                        This website template has been designed by <a href="http://www.freewebsitetemplates.com/">Free Website Templates</a> for you, for free. You can replace all this text with your own text. You can remove any link to our website from this website template, you're free to use this website template without linking back to us. If you're having problems editing this website template, then don't hesitate to ask for help on the <a href="http://www.freewebsitetemplates.com/forums/">Forums</a>.
+                    </p>
+                    <a href="#">Mr. Huynh Minh Kiet</a>
+                </div>
+                <div class="newsletter">
+                    <img src="images/skinhead.png" alt="">
+                    <p>Are you having a headache thinking about how to buy delicious and beautiful cakes?
+                        <br>Call us at 1800-0000-0000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div>
+            <div class="connect">
+                <a href="http://freewebsitetemplates.com/go/twitter/" id="twitter">twitter</a>
+                <a href="http://freewebsitetemplates.com/go/facebook/" id="facebook">facebook</a>
+                <a href="http://freewebsitetemplates.com/go/googleplus/" id="googleplus">googleplus</a>
+                <a href="http://pinterest.com/fwtemplates/" id="pinterest">pinterest</a>
+            </div>
+            <p>
+                &copy; Huỳnh Minh Kiệt-22319039
+            </p>
+        </div>
+    </div>
+    <!-- Pop-up Overlay -->
+    <div id="popupOverlay" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>Special Offer!</h2>
+            <p>Enjoy a 20% discount on all our cakes! Use code: CAKE20 at checkout.</p>
+        </div>
+    </div>
+    <script>
+        // Show the pop-up after 5 seconds
+        window.onload = function() {
+            setTimeout(showPopup, 1);
+        };
+
+        function showPopup() {
+            document.getElementById("popupOverlay").style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("popupOverlay").style.display = "none";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<!-- Website Template by freewebsitetemplates.com -->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+		body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        #body {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .article {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type=text], input[type=email], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        textarea {
+            resize: vertical;
+            height: 120px;
+        }
+        button[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button[type=submit]:hover {
+            background-color: #45a049;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="section">
+            <div class="logo">
+                <a href="index.html">Cherry Cakes</a>
+            </div>
+            <ul>
+                <li>
+                    <a href="index.html">home</a>
+                </li>
+                <li>
+                    <a href="about.html">about</a>
+                </li>
+                <li>
+                    <a href="hairstyle.html">cakes</a>
+                </li>
+                <li>
+                    <a href="news.html">news</a>
+                </li>
+                <li class="selected">
+                    <a href="contact.html">contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="body">
+        <div class="article">
+            <h3>Contact Us</h3>
+            <p>
+                Have a question or want to place an order? Contact us using the form below.
+            </p>
+            <form id="contactForm" onsubmit="return validateForm()">
+                <ul>
+                    <li>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name">
+                        <span id="nameError" class="error"></span>
+                    </li>
+                    <li>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                        <span id="emailError" class="error"></span>
+                    </li>
+					<li>
+                        <label for="email">Phone:</label>
+                        <input type="email" id="email" name="email">
+                        <span id="emailError" class="error"></span>
+                    </li>
+					<li>
+                        <label for="email">Address:</label>
+                        <input type="email" id="email" name="email">
+                        <span id="emailError" class="error"></span>
+                    </li>
+                    <li>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message"></textarea>
+                        <span id="messageError" class="error"></span>
+                    </li>
+                    <li>
+                        <button type="submit">Send Message</button>
+                    </li>
+                </ul>
+            </form>
+            <ul>
+                <li>
+                    <span>Address:</span> 7 Chome-3-1 Hongo, Bunkyo City, Tokyo 113-8654
+                </li>
+                <li>
+                    <span>Office Phone Number:</span> (864) 232-3553
+                </li>
+                <li>
+                    <span>Fax Number:</span> (864) 232-4160
+                </li>
+                <li>
+                    <span>Email:</span> <a href="mailto:cherrycakes@gmail.com">cherrycakes@gmail.com</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="footer">
+        <div>
+            <div class="connect">
+                <a href="http://freewebsitetemplates.com/go/twitter/" id="twitter">twitter</a>
+                <a href="http://freewebsitetemplates.com/go/facebook/" id="facebook">facebook</a>
+                <a href="http://freewebsitetemplates.com/go/googleplus/" id="googleplus">googleplus</a>
+                <a href="http://pinterest.com/fwtemplates/" id="pinterest">pinterest</a>
+            </div>
+            <p>
+                &copy; Huỳnh Minh Kiệt-22319039
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            // Reset error messages
+            document.getElementById('nameError').textContent = '';
+            document.getElementById('emailError').textContent = '';
+            document.getElementById('messageError').textContent = '';
+
+            // Retrieve form values
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var message = document.getElementById('message').value.trim();
+
+            // Validate name
+            if (name === '') {
+                document.getElementById('nameError').textContent = 'Please enter your name';
+                return false;
+            }
+
+            // Validate email
+            if (email === '') {
+                document.getElementById('emailError').textContent = 'Please enter your email';
+                return false;
+            } else if (!isValidEmail(email)) {
+                document.getElementById('emailError').textContent = 'Please enter a valid email address';
+                return false;
+            }
+
+            // Validate message
+            if (message === '') {
+                document.getElementById('messageError').textContent = 'Please enter your message';
+                return false;
+            }
+
+            // If all validations pass, form submission is successful
+            alert('Your message has been sent successfully!');
+            return true;
+        }
+
+        // Function to validate email format
+        function isValidEmail(email) {
+            var pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return pattern.test(email);
+        }
+    </script>
+</body>
+</html>
